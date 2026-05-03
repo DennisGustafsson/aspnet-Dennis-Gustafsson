@@ -1,0 +1,102 @@
+﻿.faq-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin: 8rem 0;
+    background-color: var(--body-bg-color);
+
+    .faq-image {
+        display: flex;
+        align-items: center;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .faq-content {
+        display: flex;
+        justify-items: flex-start;
+        flex-direction: column;
+        max-width: 40rem;
+
+        .faq-description {
+            margin-left: 2.5rem;
+            padding: 0 1rem 0 2rem;
+            max-width: fit-content;
+            background-color: var(--dark-color);
+            border-radius: 20px;
+            list-style: none;
+
+            li {
+                position: relative;
+                color: var(--white-color);
+            }
+
+            li::before {
+                content: "•";
+                color: var(--primary-color);
+                position: absolute;
+                left: -1.2rem;
+            }
+        }
+
+        h2 {
+            font-family: var(--font-heading);
+            font-size: 3rem;
+            font-weight: 600;
+            margin: 0 0 0 2.5rem;
+        }
+    }
+
+    .faq-questions {
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin: 1rem 0 0.5rem 0;
+        list-style: none;
+
+        p {
+            font-size: 1rem;
+            color: var(--gray-color)
+        }
+
+        .question-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            padding: 1rem 0;
+        }
+
+        .question-item img {
+            width: 1.5rem;
+            height: auto;
+        }
+
+        .faq-answers {
+            font-size: 1rem;
+            color: var(--gray-color);
+            margin: 0.5rem 0 1rem 0;
+            list-style: none;
+
+            li {
+                position: relative;
+            }
+
+            li::before {
+                content: "•";
+                color: var(--primary-color);
+                position: absolute;
+                left: -1.2rem;
+            }
+        }
+
+        hr {
+            width: 100%;
+            opacity: 0.2;
+            border-color: var(--gray-color);
+            margin: 1rem 0;
+        }
+    }
+}

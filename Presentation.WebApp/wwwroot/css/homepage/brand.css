@@ -1,0 +1,28 @@
+﻿.brand-section {
+    display: flex;
+    background-color: var(--primary-color);
+    border-radius: 20px;
+    padding: 2rem 2rem;
+    margin-block: 2rem;
+    justify-content: space-between;
+}
+
+.brand-group {
+    display: flex;
+    gap: 4rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.brand-item {
+    list-style: none;
+}
+
+.brand-title {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+
+    h2 {
+        margin: 0;
+    }
+}

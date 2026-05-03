@@ -1,0 +1,49 @@
+﻿.our-store-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding-inline: 20rem;
+    background-color: var(--light-color);
+}
+
+.store-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-block: 4rem;
+}
+
+.our-store-title {
+    background-color: var(--dark-color);
+    color: var(--white-color);
+    border-radius: 50px;
+    width: fit-content;
+    padding: .5rem 2rem;
+    list-style: none;
+
+    li {
+        position: relative;
+    }
+
+    li::before {
+        content: "•";
+        color: var(--primary-color);
+        position: absolute;
+        left: -1.2rem;
+    }
+}
+
+.store-description {
+    font-size: 3rem;
+    font-family: var(--font-heading);
+    padding-bottom: 4rem;
+    line-height: 6rem;
+}
+
+.store-images {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2rem;
+}

@@ -1,0 +1,52 @@
+﻿<section class="header-section">
+    <div class="logotype">
+        <a class="logotype-link" href="/">
+            <img src="~/images/logotype.png" alt="CoreFitness">
+        </a>
+    </div>
+    <nav class="main-menu">
+        <ul class="menu">
+            <li class="menu-item">
+                <a class="menu-item-link" asp-action="Index" asp-controller="FitnessCenters">Fitness Centers</a>
+            </li>
+            <li class="menu-item">
+                <a class="menu-item-link" asp-action="Index" asp-controller="Memberships">Memberships</a>
+            </li>
+            <li class="menu-item dropdown">
+                <a class="menu-item-link" asp-action="Index" asp-controller="Training">Training</a>
+            </li>
+            <li class="menu-item">
+                <a class="menu-item-link" asp-action="Index" asp-controller="CustomerService">Customer Service</a>
+            </li>
+            <li class="menu-item">
+                <a class="menu-item-link" asp-action="Index" asp-controller="Store">Store</a>
+            </li>
+        </ul>
+    </nav>
+    <nav class="account-menu">
+        <ul class="menu">
+            @if (User.Identity?.IsAuthenticated == true)
+            {
+                @if (User.IsInRole("Admin"))
+                {
+                    <li class="menu-item">
+                        <a class="menu-item-link" asp-area="Admin" asp-action="Index" asp-controller="Admin">Admin Center</a>
+                    </li>
+                }
+                <li class="menu-item">
+                    <a class="menu-item-button btn" asp-area="Account" asp-action="Index" asp-controller="Account">My Account</a>
+                </li>
+            }
+
+            else
+            {
+                <li class="menu-item">
+                    <a class="menu-item-link" asp-area="Authentication" asp-action="SignUp" asp-controller="SignUp">Become Member</a>
+                </li>
+                <li class="menu-item">
+                    <a class="menu-item-button btn" asp-area="Authentication" asp-action="Index" asp-controller="SignIn">Sign In</a>
+                </li>
+            }
+        </ul>
+    </nav>
+</section>
